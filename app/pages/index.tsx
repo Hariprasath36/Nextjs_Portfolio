@@ -1,11 +1,11 @@
-// pages/index.tsx
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from '../components'; // Adjust the path if necessary
+// app/page.tsx
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from '../components';
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div className='relative z-0 bg-primary'>
-      <Navbar />
       <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+        <Navbar /> {/* Include Navbar here */}
         <Hero />
       </div>
       <About />
@@ -21,4 +21,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

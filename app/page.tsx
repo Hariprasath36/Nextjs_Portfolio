@@ -1,5 +1,5 @@
-// /pages/index.js
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from '../app/components';
+// app/page.tsx
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components';
 
 const Home = () => {
   return (
