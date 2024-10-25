@@ -32,7 +32,7 @@ import {
   hack,
   jab,
   aww,
-} from "../Assert";
+} from "../pics";
 
 
 // Define the type for navigation links
