@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import logo from '../assets/logo.svg';
+import menu from '../assets/menu.svg';
+import close from '../assets/close.svg';
+
 
 interface NavLink {
   id: string;
