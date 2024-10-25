@@ -31,8 +31,8 @@ import {
   cef06,
   hack,
   jab,
-  aww
-} from "../public";
+  aww,
+} from "../Assert";
 
 
 // Define the type for navigation links
@@ -331,4 +331,4 @@ const projects: Project[] = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects, navLinks };
+export { services, technologies, experiences, testimonials, projects, };
