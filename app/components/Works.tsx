@@ -3,7 +3,7 @@ import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import Image from 'next/image';
 import { styles } from "../styles";
-import github from '.public/github.png';
+import github from '/github.png'; // Ensure this path is correct (in the public folder)
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -19,7 +19,7 @@ interface Project {
   name: string;
   description: string;
   tags: Tag[];
-  image: string;
+  image: string; // Ensure this image path is correct
   source_code_link: string;
 }
 
@@ -46,12 +46,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
       >
         <div className='relative w-full h-[230px]'>
-          <img
-            src={image}
-            alt='project_image'
-            className='w-full h-full object-cover rounded-2xl'
+          <Image
+            src={image} // Use the Image component for project images
+            alt='Project Image' // Improved alt text
+            className='rounded-2xl'
+            layout="fill" // Use layout fill for responsive images
+            objectFit="cover" // Ensures the image covers the area
           />
-
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
@@ -89,14 +90,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 const Works: React.FC = () => {
   return (
     <>
-      <motion.div variants={textVariant(0.1)}> {/* Pass delay here */}
+      <motion.div variants={textVariant(0.1)}>
         <p className={`${styles.sectionSubText}`}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
       <div className='w-full flex'>
         <motion.p
-          variants={fadeIn("up", "spring", 0.1, 1)} // Provide necessary arguments
+          variants={fadeIn("up", "spring", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
           Following projects showcase my skills and experience through
