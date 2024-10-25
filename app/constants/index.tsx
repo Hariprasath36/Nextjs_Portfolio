@@ -34,7 +34,56 @@ import {
   aww
 } from "../assets";
 
-export const navLinks = [
+// Define the type for navigation links
+interface NavLink {
+  id: string;
+  title: string;
+}
+
+// Define the type for services
+interface Service {
+  title: string;
+  icon: string; // Assuming icon is a string path
+}
+
+// Define the type for technologies
+interface Technology {
+  name: string;
+  icon: string; // Assuming icon is a string path
+}
+
+// Define the type for experiences
+interface Experience {
+  title: string;
+  company_name: string;
+  icon: string; // Assuming icon is a string path
+  iconBg: string;
+  date: string;
+  points?: string[];
+  certificate?: string; // Optional, in case not all experiences have a certificate
+}
+
+// Define the type for testimonials
+interface Testimonial {
+  testimonial: string;
+  name: string;
+  designation: string;
+  company: string;
+  // Optional image property
+  image?: string; 
+}
+
+// Define the type for projects
+interface Project {
+  name: string;
+  description: string;
+  tags: { name: string; color: string }[];
+  image: string; // Assuming image is a string path
+  source_code_link: string; // Assuming this is a string URL
+}
+
+// Navigation links
+export const navLinks: NavLink[] = [
   {
     id: "about",
     title: "About",
@@ -49,7 +98,8 @@ export const navLinks = [
   },
 ];
 
-const services = [
+// Services
+const services: Service[] = [
   {
     title: "Web Developer",
     icon: web,
@@ -68,7 +118,8 @@ const services = [
   },
 ];
 
-const technologies = [
+// Technologies
+const technologies: Technology[] = [
   {
     name: "HTML 5",
     icon: html,
@@ -123,7 +174,8 @@ const technologies = [
   },
 ];
 
-const experiences = [
+// Experiences
+const experiences: Experience[] = [
   {
     title: "Java Developer",
     company_name: "CUBIKSOFT TECHNOLOGY",
@@ -144,8 +196,6 @@ const experiences = [
     date: " August 2024", 
     certificate: cef06
   },
-
-
   {
     title: "Java Full Stack Certificate",
     company_name: "Qtree Technology",
@@ -154,8 +204,6 @@ const experiences = [
     date: " Jan 2024 -Apr 2024", 
     certificate: cef05
   },
-
-
   {
     title: "Java basic Certificate",
     company_name: "Hacker Rank",
@@ -164,8 +212,6 @@ const experiences = [
     date: "18 August 2024", 
     certificate: cef01
   },
-
-
   {
     title: "SQL basic Certificate",
     company_name: "Hacker Rank",
@@ -174,7 +220,6 @@ const experiences = [
     date: "23 August 2024", 
     certificate: cef03
   },
-
   {
     title: "Java Certificate",
     company_name: "Skill Rack",
@@ -191,21 +236,16 @@ const experiences = [
     date: "20 Dec 2021", 
     certificate: cef04
   },
-
-
-  
-
-  
 ];
 
-const testimonials = [
+// Testimonials
+const testimonials: Testimonial[] = [
   {
     testimonial:
       "I've known Hari for the past few months, and there are several qualities that really stand out. He is highly dedicated, consistently invests extra time and effort into learning new things, and has a strong ability to quickly grasp concepts. He possesses tremendous potential that is just waiting to be fully realized.",
     name: "Gokul",
     designation: "Full Stack Developer",
     company: "IIT Madras"
-    
   },
   {
     testimonial:
@@ -213,7 +253,6 @@ const testimonials = [
     name: "RanjithKumar",
     designation: "Full Stack - Intern",
     company: "Magizh Technologies"
-   
   },
   {
     testimonial:
@@ -221,12 +260,11 @@ const testimonials = [
     name: "Poovendran",
     designation: "Full Stack - Intern",
     company: "Magizh Technologies"
-   
-    //image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
-const projects = [
+// Projects
+const projects: Project[] = [
   {
     name: "E-vehicle Bunk Finder",
     description:
@@ -292,4 +330,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects, navLinks };

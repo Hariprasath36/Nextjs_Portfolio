@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
+import { ReactNode, ComponentType } from "react";
 
 import { styles } from "../styles";
 import { staggerContainer } from "../utils/motion";
 
-const StarWrapper = (Component, idName) =>
-  function HOC() {
+// Define a Higher-Order Component (HOC) type
+const StarWrapper = (Component: ComponentType, idName: string) => {
+  return function HOC(): JSX.Element {
     return (
       <motion.section
         variants={staggerContainer()}
@@ -21,5 +23,6 @@ const StarWrapper = (Component, idName) =>
       </motion.section>
     );
   };
+};
 
 export default StarWrapper;
