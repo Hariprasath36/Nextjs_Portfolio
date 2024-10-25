@@ -9,7 +9,7 @@ const StarWrapper = (Component: ComponentType, idName: string) => {
   return function HOC(): JSX.Element {
     return (
       <motion.section
-        variants={staggerContainer()}
+        variants={staggerContainer(0.2)} // Provide the required argument here
         initial='hidden'
         whileInView='show'
         viewport={{ once: true, amount: 0.25 }}
