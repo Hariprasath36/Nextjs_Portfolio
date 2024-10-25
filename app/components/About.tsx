@@ -5,7 +5,20 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
+
+// Updated fadeIn function to include all required parameters
+const fadeIn = (direction = "", easing = "", duration = 1, delay = 0) => ({
+  hidden: { opacity: 0, y: direction === "up" ? 50 : -50 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration,
+      delay,
+      ease: easing,
+    },
+  },
+});
 
 // Define types for the ServiceCard props
 interface ServiceCardProps {
@@ -46,13 +59,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, icon }) => (
 const About: React.FC = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={fadeIn()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
       <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
+        variants={fadeIn("", "", 0.1, 0.1)} // Providing delay
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
         I'm a passionate Java Developer with a deep love for crafting efficient, scalable, and robust software solutions. With a strong foundation in object-oriented programming and extensive experience in building applications using Java,
