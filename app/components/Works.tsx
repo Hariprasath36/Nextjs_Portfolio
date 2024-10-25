@@ -1,6 +1,5 @@
 import React from "react";
 import { Tilt } from "react-tilt";
-
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -9,7 +8,26 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({
+// Define the structure of the tag object
+interface Tag {
+  name: string;
+  color: string;
+}
+
+// Define the structure of the project object
+interface Project {
+  name: string;
+  description: string;
+  tags: Tag[];
+  image: string;
+  source_code_link: string;
+}
+
+interface ProjectCardProps extends Project {
+  index: number;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({
   index,
   name,
   description,
@@ -68,11 +86,11 @@ const ProjectCard = ({
   );
 };
 
-const Works = () => {
+const Works: React.FC = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
+        <p className={`${styles.sectionSubText}`}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
@@ -90,7 +108,7 @@ const Works = () => {
       </div>
 
       <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
+        {projects.map((project: Project, index: number) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>

@@ -12,8 +12,24 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
-const ExperienceCard = ({ experience }) => {
-  console.log(experience);
+// Define types for the experience data
+interface Experience {
+  date: string;
+  title: string;
+  company_name: string;
+  points: string[];
+  icon: string;
+  iconBg: string;
+  certificate?: string; // Optional
+}
+
+// Define the props for the ExperienceCard component
+interface ExperienceCardProps {
+  experience: Experience;
+}
+
+// ExperienceCard component
+const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -30,7 +46,6 @@ const ExperienceCard = ({ experience }) => {
             alt={experience.company_name}
             className='w-[60%] h-[60%] object-contain'
           />
-
         </div>
       }
     >
@@ -54,17 +69,18 @@ const ExperienceCard = ({ experience }) => {
           </li>
         ))}
       </ul>
-      {experience.certificate && 
-      <img src={experience.certificate} alt={experience.company_name} className="w-full h-full object-contain" />
-      }
-      </VerticalTimelineElement>
+      {experience.certificate && (
+        <img src={experience.certificate} alt={experience.company_name} className="w-full h-full object-contain" />
+      )}
+    </VerticalTimelineElement>
   );
 };
 
-const Experience = () => {
+// Experience component
+const Experience: React.FC = () => {
   return (
     <>
-      <motion.div >
+      <motion.div>
         <p className={`${styles.sectionSubText} text-center`}>
           What I have done so far
         </p>
@@ -72,8 +88,6 @@ const Experience = () => {
           Work Experience.
         </h2>
       </motion.div>
-      
-
 
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline>

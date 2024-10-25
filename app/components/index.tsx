@@ -7,9 +7,9 @@ import Experience from "./Experience";
 import Works from "./Works";
 import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
-import CanvasLoader from "./Loader";
+import CanvasLoader from "./CanvasLoader";
 
-
+// Export all components and canvases
 export {
   Hero,
   Navbar,

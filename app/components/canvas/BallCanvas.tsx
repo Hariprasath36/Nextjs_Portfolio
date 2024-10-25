@@ -8,9 +8,15 @@ import {
   useTexture,
 } from "@react-three/drei";
 
-import CanvasLoader from "../Loader";
+import CanvasLoader from "../CanvasLoader";
 
-const Ball = (props) => {
+// Define the props for the Ball component
+interface BallProps {
+  imgUrl: string; // Expecting a string URL for the image
+}
+
+// Ball component with props
+const Ball: React.FC<BallProps> = (props) => {
   const [decal] = useTexture([props.imgUrl]);
 
   return (
@@ -37,7 +43,13 @@ const Ball = (props) => {
   );
 };
 
-const BallCanvas = ({ icon }) => {
+// Define the props for the BallCanvas component
+interface BallCanvasProps {
+  icon: string; // Expecting a string URL for the icon
+}
+
+// BallCanvas component with props
+const BallCanvas: React.FC<BallCanvasProps> = ({ icon }) => {
   return (
     <Canvas
       frameloop='demand'

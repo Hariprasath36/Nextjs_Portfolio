@@ -6,7 +6,22 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
 
-const FeedbackCard = ({
+// Define the type for each testimonial
+interface Testimonial {
+  testimonial: string;
+  name: string;
+  designation: string;
+  company: string;
+  image?: string; // Optional
+}
+
+// Define the props for the FeedbackCard component
+interface FeedbackCardProps extends Testimonial {
+  index: number;
+}
+
+// FeedbackCard component
+const FeedbackCard: React.FC<FeedbackCardProps> = ({
   index,
   testimonial,
   name,
@@ -33,17 +48,21 @@ const FeedbackCard = ({
           </p>
         </div>
 
-        {/* <img
-          src={image}
-          alt={`feedback_by-${name}`}
-          className='w-10 h-10 rounded-full object-cover'
-        /> */}
+        {/* Optional image rendering */}
+        {image && (
+          <img
+            src={image}
+            alt={`feedback_by-${name}`}
+            className='w-10 h-10 rounded-full object-cover'
+          />
+        )}
       </div>
     </div>
   </motion.div>
 );
 
-const Feedbacks = () => {
+// Feedbacks component
+const Feedbacks: React.FC = () => {
   return (
     <div className={`mt-12 bg-black-100 rounded-[20px]`}>
       <div

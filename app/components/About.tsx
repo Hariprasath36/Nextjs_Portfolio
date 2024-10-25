@@ -1,6 +1,5 @@
 import React from "react";
 import { Tilt } from 'react-tilt';
-
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -8,7 +7,15 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
+// Define types for the ServiceCard props
+interface ServiceCardProps {
+  index: number;
+  title: string;
+  icon: string;
+}
+
+// ServiceCard component
+const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
@@ -27,7 +34,6 @@ const ServiceCard = ({ index, title, icon }) => (
           alt='web-development'
           className='w-16 h-16 object-contain'
         />
-
         <h3 className='text-white text-[20px] font-bold text-center'>
           {title}
         </h3>
@@ -36,7 +42,8 @@ const ServiceCard = ({ index, title, icon }) => (
   </Tilt>
 );
 
-const About = () => {
+// About component
+const About: React.FC = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -49,7 +56,7 @@ const About = () => {
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
         I'm a passionate Java Developer with a deep love for crafting efficient, scalable, and robust software solutions. With a strong foundation in object-oriented programming and extensive experience in building applications using Java,
-         I thrive on turning complex problems into simple, elegant code.
+        I thrive on turning complex problems into simple, elegant code.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
