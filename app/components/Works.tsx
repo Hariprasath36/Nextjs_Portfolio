@@ -3,7 +3,7 @@ import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import Image from 'next/image';
 import { styles } from "../styles";
-import github from '../assets/github.png';
+import github from '.public/github.png';
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
