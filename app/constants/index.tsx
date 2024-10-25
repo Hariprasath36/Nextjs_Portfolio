@@ -34,6 +34,7 @@ import {
   aww
 } from "../assets";
 
+
 // Define the type for navigation links
 interface NavLink {
   id: string;
