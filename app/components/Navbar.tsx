@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
 
 const Navbar: React.FC = () => {
   const [active, setActive] = useState<string>("");
@@ -32,19 +31,14 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-        <Link
-          to='/'
-          className='flex items-center gap-2'
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex'>
-            Hariprasath &nbsp;
-            <span className='sm:block hidden'> | Java Developer</span>
-          </p>
+        <Link href='/' onClick={() => { setActive(""); window.scrollTo(0, 0); }}>
+          <div className='flex items-center gap-2 cursor-pointer'>
+            <img src='/logo.svg' alt='logo' className='w-9 h-9 object-contain' />
+            <p className='text-white text-[18px] font-bold flex'>
+              Hariprasath &nbsp;
+              <span className='sm:block hidden'> | Java Developer</span>
+            </p>
+          </div>
         </Link>
 
         <ul className='list-none hidden sm:flex flex-row gap-10'>
@@ -63,7 +57,7 @@ const Navbar: React.FC = () => {
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img
-            src={toggle ? close : menu}
+            src={toggle ? "/close.svg" : "/menu.svg"}
             alt='menu'
             className='w-[28px] h-[28px] object-contain'
             onClick={() => setToggle(!toggle)}
