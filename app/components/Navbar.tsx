@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assest";
+import { logo, menu, close } from "../assets";
 
 const Navbar: React.FC = () => {
   const [active, setActive] = useState<string>("");

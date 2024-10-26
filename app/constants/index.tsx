@@ -32,7 +32,7 @@ import {
   hack,
   jab,
   aww,
-} from "../Assert";
+} from "../assets";
 
 
 // Define the type for navigation links
