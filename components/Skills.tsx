@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 const skillsData = [
   { id: 1, src: "/jsm-logo.png", alt: "HTML5" },
-  { id: 2, src: "/path/to/your/css3.png", alt: "CSS3" },
-  { id: 3, src: "/path/to/your/javascript.png", alt: "JavaScript" },
+  { id: 2, src: "/jsm-logo.png", alt: "CSS3" },
+  { id: 3, src: "/jsm-logo.png", alt: "JavaScript" },
   { id: 4, src: "/path/to/your/java.png", alt: "Java" },
   { id: 5, src: "/path/to/your/react.png", alt: "React" },
   { id: 6, src: "/path/to/your/mysql.png", alt: "MySQL" },
