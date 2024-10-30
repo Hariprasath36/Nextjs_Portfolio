@@ -11,11 +11,11 @@ const skillsData = [
   { id: 5, src: "/jsm-logo.png", alt: "React" },
   { id: 6, src: "/jsm-logo.png", alt: "MySQL" },
   { id: 7, src: "/jsm-logo.png", alt: "PostgreSQL" },
-  { id: 8, src: "/path/to/your/mongodb.png", alt: "MongoDB" },
-  { id: 9, src: "/path/to/your/git.png", alt: "Git" },
-  { id: 10, src: "/path/to/your/spring.png", alt: "Spring" },
-  { id: 11, src: "/path/to/your/docker.png", alt: "Docker" },
-  { id: 12, src: "/path/to/your/nodejs.png", alt: "Node.js" },
+  { id: 8, src: "/jsm-logo.png", alt: "MongoDB" },
+  { id: 9, src: "/jsm-logo.png", alt: "Git" },
+  { id: 10, src: "/jsm-logo.png", alt: "Spring" },
+  { id: 12, src: "/jsm-logo.png", alt: "Node.js" },
+  { id: 11, src: "/jsm-logo.png", alt: "Docker" },
 ];
 
 const Skills = () => {
