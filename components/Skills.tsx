@@ -14,8 +14,8 @@ const skillsData = [
   { id: 8, src: "/jsm-logo.png", alt: "MongoDB" },
   { id: 9, src: "/jsm-logo.png", alt: "Git" },
   { id: 10, src: "/jsm-logo.png", alt: "Spring" },
-  { id: 12, src: "/jsm-logo.png", alt: "Node.js" },
-  { id: 11, src: "/jsm-logo.png", alt: "Docker" },
+  { id: 11, src: "/jsm-logo.png", alt: "Node.js" },
+  { id: 12, src: "/jsm-logo.png", alt: "Docker" },
 ];
 
 const Skills = () => {
@@ -24,7 +24,7 @@ const Skills = () => {
       <h1 className="heading">
         My <span className="text-purple">skills</span>
       </h1>
-      
+
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-2 gap-10">
         {skillsData.map((skill) => (
           <motion.div
@@ -33,8 +33,9 @@ const Skills = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.1, rotate: 5 }} // Added rotation on hover
           >
-            <div className="border-4 border-transparent transition-transform duration-300 hover:scale-105 hover:border-purple-400 rounded-full">
+            <div className="border-4 border-transparent transition-transform duration-300 hover:scale-110 hover:border-purple-400 rounded-full">
               <div
                 className="flex justify-center items-center p-5"
                 style={{
@@ -46,7 +47,7 @@ const Skills = () => {
                 <img
                   src={skill.src}
                   alt={skill.alt}
-                  className="w-16 h-16 object-contain" // Adjust size as needed
+                  className="w-16 h-16 object-contain transition-transform duration-300 hover:scale-125" // Added scale effect for image
                 />
               </div>
             </div>
