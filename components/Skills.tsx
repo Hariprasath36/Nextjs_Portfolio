@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import jsm from "../public/jsm-logo.png";
+
 const skillsData = [
   { id: 1, src: "/jsm-logo.png", alt: "HTML5" },
   { id: 2, src: "/path/to/your/css3.png", alt: "CSS3" },
