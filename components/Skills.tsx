@@ -5,18 +5,18 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/MovingBorders"; // Assuming MovingBorders has the animation effect
 
 const skillsData = [
-  { id: 1, src: "/jsm-logo.png", alt: "HTML5" },
-  { id: 2, src: "/jsm-logo.png", alt: "CSS3" },
-  { id: 3, src: "/jsm-logo.png", alt: "JavaScript" },
-  { id: 4, src: "/jsm-logo.png", alt: "Java" },
-  { id: 5, src: "/jsm-logo.png", alt: "React" },
-  { id: 6, src: "/jsm-logo.png", alt: "MySQL" },
-  { id: 7, src: "/jsm-logo.png", alt: "PostgreSQL" },
-  { id: 8, src: "/jsm-logo.png", alt: "MongoDB" },
-  { id: 9, src: "/jsm-logo.png", alt: "Git" },
-  { id: 10, src: "/jsm-logo.png", alt: "Spring" },
-  { id: 11, src: "/jsm-logo.png", alt: "Node.js" },
-  { id: 12, src: "/jsm-logo.png", alt: "Docker" },
+  { id: 1, src: "/html-logo.png", alt: "HTML5" },
+  { id: 2, src: "/css-logo.png", alt: "CSS3" },
+  { id: 3, src: "/js-logo.png", alt: "JavaScript" },
+  { id: 4, src: "/java-logo.png", alt: "Java" },
+  { id: 5, src: "/react-logo.png", alt: "React" },
+  { id: 6, src: "/mysql-logo.png", alt: "MySQL" },
+  { id: 7, src: "/tailwind-logo.png", alt: "Tailwind" },
+  { id: 8, src: "/postgres-logo.png", alt: "PostgreSQL" },
+  { id: 9, src: "/mongo-logo.png", alt: "MongoDB" },
+  { id: 10, src: "/git-logo.png", alt: "Git" },
+  { id: 11, src: "/spring-logo.png", alt: "Spring" },
+  { id: 12, src: "/docker-logo.png", alt: "Docker" },
 ];
 
 const Skills = () => {
@@ -26,7 +26,7 @@ const Skills = () => {
         My <span className="text-purple">skills</span>
       </h1>
 
-      <div className="w-full mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
+      <div className="w-full mt-12 grid grid-cols-3 gap-y-8 gap-x-6 justify-items-center">
         {skillsData.map((skill) => (
           <Button
             key={skill.id}
@@ -36,13 +36,15 @@ const Skills = () => {
               backgroundImage: "linear-gradient(135deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
               clipPath: "polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%)", // Hexagon shape
               boxShadow: "0 0 15px rgba(255, 255, 255, 0.2)", // Soft glow effect
+              width: "80px", // Adjust width
+              height: "80px", // Adjust height
             }}
-            className="flex justify-center items-center p-5 w-32 h-32 lg:w-40 lg:h-40"
+            className="flex justify-center items-center p-3 w-32 h-32 transition-all duration-300"
           >
             <motion.img
               src={skill.src}
               alt={skill.alt}
-              className="w-16 h-16 object-contain transition-transform duration-300 hover:scale-125"
+              className="w-12 h-12 object-contain transition-transform duration-300 hover:scale-125"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
