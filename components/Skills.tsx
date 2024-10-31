@@ -26,7 +26,7 @@ const Skills = () => {
         My <span className="text-purple">skills</span>
       </h1>
 
-      <div className="w-full mt-12 grid grid-cols-3 gap-y-8 gap-x-6 justify-items-center">
+      <div className="w-full mt-16 grid grid-cols-12 gap-y-20 gap-x-5 justify-items-center">
         {skillsData.map((skill) => (
           <Button
             key={skill.id}
@@ -36,15 +36,15 @@ const Skills = () => {
               backgroundImage: "linear-gradient(135deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
               clipPath: "polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%)", // Hexagon shape
               boxShadow: "0 0 15px rgba(255, 255, 255, 0.2)", // Soft glow effect
-              width: "80px", // Adjust width
-              height: "80px", // Adjust height
+              width: "80px", // Adjusted width
+              height: "90px", // Adjusted height
             }}
-            className="flex justify-center items-center p-3 w-32 h-32 transition-all duration-300"
+            className="flex justify-center items-center transition-all duration-300"
           >
             <motion.img
               src={skill.src}
               alt={skill.alt}
-              className="w-12 h-12 object-contain transition-transform duration-300 hover:scale-125"
+              className="w-10 h-10 object-contain transition-transform duration-300 hover:scale-125"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
