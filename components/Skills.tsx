@@ -1,7 +1,8 @@
-"use client"; // If you are using hooks or client-side state
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
+import { Button } from "./ui/MovingBorders"; // Assuming MovingBorders has the animation effect
 
 const skillsData = [
   { id: 1, src: "/jsm-logo.png", alt: "HTML5" },
@@ -27,31 +28,28 @@ const Skills = () => {
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-2 gap-10">
         {skillsData.map((skill) => (
-          <motion.div
+          <Button
             key={skill.id}
-            className="relative"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            whileHover={{ scale: 1.1, rotate: 5 }} // Added rotation on hover
+            duration={Math.floor(Math.random() * 10000) + 10000} // Random duration for each border animation
+            borderRadius="2rem" // Custom rounded shape
+            style={{
+              background: "rgb(4,7,29)",
+              backgroundImage: "linear-gradient(135deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+              borderRadius: "20% / 50%", // Unique shape for a more attractive look
+              boxShadow: "0 0 15px rgba(255, 255, 255, 0.2)", // Soft glow effect
+            }}
+            className="flex justify-center items-center p-5"
           >
-            <div className="border-4 border-transparent transition-transform duration-300 hover:scale-110 hover:border-purple-400 rounded-full">
-              <div
-                className="flex justify-center items-center p-5"
-                style={{
-                  background: "rgb(4, 7, 29)",
-                  backgroundColor: "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-                  borderRadius: "50%",
-                }}
-              >
-                <img
-                  src={skill.src}
-                  alt={skill.alt}
-                  className="w-16 h-16 object-contain transition-transform duration-300 hover:scale-125" // Added scale effect for image
-                />
-              </div>
-            </div>
-          </motion.div>
+            <motion.img
+              src={skill.src}
+              alt={skill.alt}
+              className="w-16 h-16 object-contain transition-transform duration-300 hover:scale-125"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ scale: 1.1, rotate: 5 }}
+            />
+          </Button>
         ))}
       </div>
     </div>
