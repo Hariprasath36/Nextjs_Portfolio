@@ -26,19 +26,18 @@ const Skills = () => {
         My <span className="text-purple">skills</span>
       </h1>
 
-      <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-2 gap-10">
+      <div className="w-full mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
         {skillsData.map((skill) => (
           <Button
             key={skill.id}
-            duration={Math.floor(Math.random() * 10000) + 10000} // Random duration for each border animation
-            borderRadius="2rem" // Custom rounded shape
+            duration={Math.floor(Math.random() * 10000) + 10000} // Random duration for border animation
             style={{
               background: "rgb(4,7,29)",
               backgroundImage: "linear-gradient(135deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-              borderRadius: "20% / 50%", // Unique shape for a more attractive look
+              clipPath: "polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%)", // Hexagon shape
               boxShadow: "0 0 15px rgba(255, 255, 255, 0.2)", // Soft glow effect
             }}
-            className="flex justify-center items-center p-5"
+            className="flex justify-center items-center p-5 w-32 h-32 lg:w-40 lg:h-40"
           >
             <motion.img
               src={skill.src}
