@@ -5,18 +5,18 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/MovingBorders"; // Assuming MovingBorders has the animation effect
 
 const skillsData = [
-  { id: 1, src: "/html-logo.png", alt: "HTML5" },
-  { id: 2, src: "/css-logo.png", alt: "CSS3" },
-  { id: 3, src: "/js-logo.png", alt: "JavaScript" },
-  { id: 4, src: "/java-logo.png", alt: "Java" },
-  { id: 5, src: "/react-logo.png", alt: "React" },
-  { id: 6, src: "/mysql-logo.png", alt: "MySQL" },
-  { id: 7, src: "/tailwind-logo.png", alt: "Tailwind" },
-  { id: 8, src: "/postgres-logo.png", alt: "PostgreSQL" },
-  { id: 9, src: "/mongo-logo.png", alt: "MongoDB" },
-  { id: 10, src: "/git-logo.png", alt: "Git" },
-  { id: 11, src: "/spring-logo.png", alt: "Spring" },
-  { id: 12, src: "/docker-logo.png", alt: "Docker" },
+  { id: 1, src: "/html.png", alt: "HTML5" },
+  { id: 2, src: "/css.png", alt: "CSS3" },
+  { id: 3, src: "/nodejs.png", alt: "JavaScript" },
+  { id: 4, src: "/java.png", alt: "Java" },
+  { id: 5, src: "/reactjs.png", alt: "React" },
+  { id: 6, src: "/mySql.png", alt: "MySQL" },
+  { id: 7, src: "/tailwind.png", alt: "Tailwind" },
+  { id: 8, src: "/psql.png", alt: "PostgreSQL" },
+  { id: 9, src: "/mongodb.png", alt: "MongoDB" },
+  { id: 10, src: "/git.png", alt: "Git" },
+  { id: 11, src: "/springboot.png", alt: "Spring" },
+  { id: 12, src: "/docker.png", alt: "Docker" },
 ];
 
 const Skills = () => {
@@ -36,15 +36,15 @@ const Skills = () => {
               backgroundImage: "linear-gradient(135deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
               clipPath: "polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%)", // Hexagon shape
               boxShadow: "0 0 15px rgba(255, 255, 255, 0.2)", // Soft glow effect
-              width: "80px", // Adjusted width
-              height: "90px", // Adjusted height
+              width: "100px", // Adjusted width
+              height: "100px", // Adjusted height
             }}
             className="flex justify-center items-center transition-all duration-300"
           >
             <motion.img
               src={skill.src}
               alt={skill.alt}
-              className="w-10 h-10 object-contain transition-transform duration-300 hover:scale-125"
+              className="w-14 h-14 object-contain transition-transform duration-300 hover:scale-125"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
