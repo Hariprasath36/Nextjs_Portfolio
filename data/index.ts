@@ -8,9 +8,9 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I have a  strong foundation in object-oriented programming and extensive experience in building applications using Java, I thrive on turning complex problems into simple, elegant code.",
+    title: "I have a  strong foundation in object-oriented programming and extensive experience in building applications using Java, Nextjs and Typescript.",
     description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
+    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[70vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
     img: "/b1.svg",
