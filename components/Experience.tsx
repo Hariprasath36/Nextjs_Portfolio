@@ -7,7 +7,7 @@ const Experience = () => {
     <div className="py-20 w-full flex flex-col items-center bg-dark">
       {/* Title Section */}
       <h1 className="heading text-center text-white text-3xl md:text-4xl font-bold mb-4">
-      <span className="text-purple">Work Experience.</span>
+      <span className="text-purple">Work Experience</span>
       </h1>
 
       {/* Centered vertical timeline line */}
@@ -26,7 +26,6 @@ const Experience = () => {
               {/* Circle and date indicator on the vertical line */}
               <div className="absolute w-6 h-6 bg-purple-500 rounded-full left-1/2 transform -translate-x-1/2 z-10">
                 <span className="absolute text-xs text-white -top-8 left-1/2 transform -translate-x-1/2">
-                  {card.date}
                 </span>
               </div>
 
