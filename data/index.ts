@@ -194,28 +194,40 @@ export const workExperience = [
   },
   {
     id: 3,
-    title: "Freelance App Development Project",
-    subTitle: "Client-Focused Mobile App",
-    points: [
-      "Led the development from concept to deployment on app stores.",
-      "Integrated payment gateways and social media login features.",
-      "Ensured security and performance optimization for high traffic."
-    ],
-    thumbnail: "/exp3.svg",
+    title: "Java Full Stack Certificate",
+    subTitle: "Qtree Technology",
+    thumbnail: "/java_full.jpg",
     className: "md:col-span-2"
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    subTitle: "Modern Frontend Features Development",
-    points: [
-      "Built and maintained user-friendly interfaces with React and Next.js.",
-      "Implemented responsive design principles for multiple devices.",
-      "Streamlined deployment process with CI/CD pipelines."
-    ],
-    thumbnail: "/exp4.svg",
+    title: "Java basic Certificate",
+    subTitle: "Hacker Rank",
+    thumbnail: "/java_cer.png",
     className: "md:col-span-2"
-  }
+  },
+  {
+    id: 5,
+    title: "SQL basic Certificate",
+    subTitle: "Hacker Rank",
+    thumbnail: "/sql.png",
+    className: "md:col-span-2"
+  },
+  {
+    id: 6,
+    title: "Java Certificate",
+    subTitle: "Skill Rack",
+    thumbnail: "/skill.png",
+    className: "md:col-span-2"
+  },
+  {
+    id: 7,
+    title: "AWS Certificate",
+    subTitle: "Coursera",
+    thumbnail: "/aws.png",
+    className: "md:col-span-2"
+  },
+  
 ];
 
 
