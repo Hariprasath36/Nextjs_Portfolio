@@ -174,32 +174,53 @@ export const workExperience = [
   {
     id: 1,
     title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
-    className: "md:col-span-2",
+    subTitle: "Assisted in Web Platform Development",
+    points: [
+      "Enhanced interactivity on the platform using React.js.",
+      "Collaborated with the design team to improve user experience.",
+      "Implemented efficient state management with Redux."
+    ],
     thumbnail: "/exp1.svg",
+    className: "md:col-span-2"
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Mobile App Developer",
+    subTitle: "JSM Tech",
+    points: [
+      "Developed cross-platform mobile app with React Native.",
+      "Optimized for both iOS & Android for a seamless user experience.",
+      "Utilized Firebase for real-time data syncing and analytics."
+    ],
     thumbnail: "/exp2.svg",
+    className: "md:col-span-2"
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Freelance App Development Project",
+    subTitle: "Client-Focused Mobile App",
+    points: [
+      "Led the development from concept to deployment on app stores.",
+      "Integrated payment gateways and social media login features.",
+      "Ensured security and performance optimization for high traffic."
+    ],
     thumbnail: "/exp3.svg",
+    className: "md:col-span-2"
   },
   {
     id: 4,
     title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
+    subTitle: "Modern Frontend Features Development",
+    points: [
+      "Built and maintained user-friendly interfaces with React and Next.js.",
+      "Implemented responsive design principles for multiple devices.",
+      "Streamlined deployment process with CI/CD pipelines."
+    ],
     thumbnail: "/exp4.svg",
-  },
+    className: "md:col-span-2"
+  }
 ];
+
 
 export const socialMedia = [
   {
