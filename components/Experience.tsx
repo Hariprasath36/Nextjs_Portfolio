@@ -32,8 +32,10 @@ const Experience = () => {
                 borderRadius="1.75rem"
                 style={{
                   background: "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                  width: "450px",  // Set fixed width to match screenshot
+                  maxWidth: "100%", // Ensure it doesn't exceed the container
                 }}
-                className={`relative z-10 flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800 max-w-xs shadow-lg ${
+                className={`relative z-10 text-black dark:text-white border-neutral-200 dark:border-slate-800 shadow-lg ${
                   index % 2 === 0 ? "mr-auto ml-0" : "ml-auto mr-0"
                 }`}
               >
@@ -43,14 +45,14 @@ const Experience = () => {
                   <h2 className="text-lg text-gray-400">{card.subTitle}</h2>
                   {/* Bullet Points */}
                   <ul className="text-white-100 mt-2 font-semibold list-disc list-inside">
-                    {card.points.map((point, idx) => (
+                    {card.points?.map((point, idx) => (
                       <li key={idx}>{point}</li>
                     ))}
                   </ul>
                   {/* Additional Image at the bottom */}
                   <img
                     src={card.thumbnail} // Replace with the image you want to display
-                    alt={`${card.title} image`}
+                    
                     className="mt-4 w-full h-auto object-contain"
                   />
                 </div>

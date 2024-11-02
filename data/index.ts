@@ -173,26 +173,23 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    subTitle: "Assisted in Web Platform Development",
+    title: "Java Developer",
+    subTitle: "CUBIKSOFT TECHNOLOGY",
     points: [
-      "Enhanced interactivity on the platform using React.js.",
-      "Collaborated with the design team to improve user experience.",
-      "Implemented efficient state management with Redux."
+     "Developing and maintaining web applications using Spring Boot and other related technologies.",
+     "A Java Developer internship provides hands-on experience with Java programming, including working on real-world projects that enhance skills in core Java concepts, object-oriented programming (OOP), and Java frameworks like Spring and Hibernate.",
+     "Participating in code reviews and providing constructive feedback to other developers.",
+    
     ],
-    thumbnail: "/exp1.svg",
+   
     className: "md:col-span-2"
   },
   {
     id: 2,
-    title: "Mobile App Developer",
-    subTitle: "JSM Tech",
-    points: [
-      "Developed cross-platform mobile app with React Native.",
-      "Optimized for both iOS & Android for a seamless user experience.",
-      "Utilized Firebase for real-time data syncing and analytics."
-    ],
-    thumbnail: "/exp2.svg",
+    title: "Internship Certificate",
+    subTitle: "CUBIKSOFT TECHNOLOGY",
+   
+    thumbnail: "/intern.png",
     className: "md:col-span-2"
   },
   {
