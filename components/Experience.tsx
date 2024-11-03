@@ -10,14 +10,14 @@ const Experience = () => {
   useEffect(() => {
     if (containerRef.current && lastCardRef.current) {
       const containerTop = containerRef.current.getBoundingClientRect().top;
-      const lastCardMiddle = 
+      const lastCardMiddle =
         lastCardRef.current.getBoundingClientRect().top + lastCardRef.current.offsetHeight / 2;
       setLineHeight(lastCardMiddle - containerTop);
     }
   }, [workExperience]);
 
   return (
-    <div ref={containerRef} className="py-10 md:py-20 w-full flex flex-col items-center bg-dark">
+    <div ref={containerRef} className="py-10 md:py-20 w-full flex flex-col items-center bg-dark overflow-hidden">
       {/* Title Section */}
       <h1 className="heading text-center text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
         <span className="text-purple">Work Experience</span>
@@ -41,7 +41,7 @@ const Experience = () => {
               }`}
             >
               {/* Circle on the vertical line */}
-              <div className="absolute w-4 h-4 sm:w-6 sm:h-6 bg-purple-500 rounded-full left-1/2 transform -translate-x-1/2 z-10" />
+              <div className="absolute w-3 h-3 sm:w-4 sm:h-4 bg-purple-500 rounded-full left-1/2 transform -translate-x-1/2 z-10" />
 
               {/* Experience card */}
               <Button
@@ -50,7 +50,7 @@ const Experience = () => {
                 style={{
                   background: "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
                   width: "100%",
-                  maxWidth: "400px", // Limit max width for mobile
+                  maxWidth: "400px",
                 }}
                 className={`relative z-10 text-black dark:text-white border-neutral-200 dark:border-slate-800 shadow-lg mx-auto ${
                   index % 2 === 0 ? "md:mr-auto md:ml-0" : "md:ml-auto md:mr-0"
