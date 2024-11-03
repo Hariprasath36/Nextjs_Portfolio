@@ -56,20 +56,21 @@ const Experience = () => {
                   index % 2 === 0 ? "md:mr-auto md:ml-0" : "md:ml-auto md:mr-0"
                 }`}
               >
-                <div className="flex flex-col p-4 sm:p-5 gap-2">
+                <div className="flex flex-col p-4 sm:p-5 gap-2 min-h-[300px] justify-between">
                   {/* Heading */}
                   <h1 className="text-lg sm:text-xl md:text-2xl font-bold">{card.title}</h1>
                   <h2 className="text-md sm:text-lg text-gray-400">{card.subTitle}</h2>
                   {/* Bullet Points */}
-                  <ul className="text-white-100 mt-2 font-semibold list-disc list-inside text-sm sm:text-base">
-                    {card.points?.map((point, idx) => (
-                      <li key={idx}>{point}</li>
-                    ))}
-                  </ul>
+                  <ul className="mt-2 text-white-100 font-semibold list-disc list-inside pl-5 text-sm sm:text-base">
+  {card.points?.map((point, idx) => (
+    <li key={idx}>{point}</li>
+  ))}
+</ul>
                   {/* Additional Image at the bottom */}
                   <img
                     src={card.thumbnail}
                     className="mt-4 w-full h-auto object-contain rounded-lg"
+                   
                   />
                 </div>
               </Button>
