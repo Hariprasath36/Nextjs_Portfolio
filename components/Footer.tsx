@@ -1,11 +1,10 @@
 import { FaLocationArrow } from "react-icons/fa6";
-
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
+    <footer className="relative w-full pt-20 pb-10" id="contact">
       {/* background grid */}
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
         <img
@@ -15,13 +14,12 @@ const Footer = () => {
         />
       </div>
 
-      <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
-          Contact <span className="text-purple">Me</span> 
-         
+      <div className="flex flex-col items-center px-4">
+        <h1 className="heading lg:max-w-[45vw] text-center text-3xl sm:text-4xl md:text-5xl">
+          Contact <span className="text-purple">Me</span>
         </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
-        Let&apos;s bring your ideas to life – get in touch today!
+        <p className="text-white-200 my-5 text-center text-sm sm:text-base md:text-lg">
+          Let&apos;s bring your ideas to life – get in touch today!
         </p>
         <a href="mailto:hariprasa36@gmail.com">
           <MagicButton
@@ -31,12 +29,13 @@ const Footer = () => {
           />
         </a>
       </div>
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
+
+      <div className="flex flex-col md:flex-row justify-between items-center mt-16 md:mt-20 px-4">
+        <p className="text-sm sm:text-base text-center md:text-left md:font-normal font-light">
           Copyright © 2024 Hariprasath R
         </p>
 
-        <div className="flex items-center md:gap-3 gap-6">
+        <div className="flex justify-center md:justify-start items-center mt-6 md:mt-0 gap-4 sm:gap-6">
           {socialMedia.map((info) => (
             <div
               key={info.id}
