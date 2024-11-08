@@ -20,6 +20,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/logo.svg" sizes="180x180" />
+        <meta name="google-site-verification" content="google-site-verification: googlef2d1405cefd53779.html" />
       </head>
       <body className={inter.className}>
         <ThemeProvider
