@@ -9,7 +9,7 @@ const AboutPage = () => {
         <meta name="description" content="Learn more about Hariprasath's background, skills in web development, and software engineering expertise." />
         
         {/* Keywords Meta Tag */}
-        {/* <meta name="keywords" content="Hariprasath R, Sathyamangalam, web developer, software engineer, portfolio, background, experience, front-end developer, back-end developer, full-stack developer, JavaScript, React, Node.js" /> */}
+        <meta name="keywords" content="Hariprasath R, Sathyamangalam, web developer, software engineer, portfolio, background, experience, front-end developer, back-end developer, full-stack developer, JavaScript, React, Node.js" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="About | Hariprasath's Portfolio" />
